@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  * a {
+    text-decoration: none;
+    color: black; }
+  * ul, * li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+
+* h1 h2 h3 p li {
+  font-style: "Open Sans"; }
+
+* h2 {
+  font-size: 35px;
+  text-align: center;
+  margin: 1.5rem; }
+
+* h3 {
+  font-size: x-large; }
+
+* p {
+  font-size: large; }
+
+* li {
+  font-size: large; }
+
+header h1 {
+  text-align: center;
+  visibility: hidden;
+  font-size: smaller;
+  height: 1px; }
+
+header nav .nav_Logo {
+  width: 200px;
+  height: 50px; }
+
+header nav .navbar-nav {
+  flex-direction: row;
+  justify-content: space-evenly; }
+  header nav .navbar-nav .nav-link {
+    font-size: 1.2rem; }
+
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2rem; }
+  footer a {
+    color: white; }
+  footer .contenedor_Filosofia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    footer .contenedor_Filosofia .textBox_Filosofia {
+      margin: 1rem; }
+  footer .contenedor_Contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem; }
+    footer .contenedor_Contactos .newsletter {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin-bottom: 1rem; }
+      footer .contenedor_Contactos .newsletter .cont_newsletter {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem; }
+        footer .contenedor_Contactos .newsletter .cont_newsletter .textField_newsletter {
+          width: 80%; }
+    footer .contenedor_Contactos .redesSociales {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin-bottom: 1rem; }
+      footer .contenedor_Contactos .redesSociales .cont_redesSociales {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem; }
+        footer .contenedor_Contactos .redesSociales .cont_redesSociales .logos_redesSociales img {
+          width: 32px;
+          height: 32px; }
+  footer .contenedor_ListBottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    gap: 2%; }
+
+main .contenedor_carruselInicio .item_Carrusel img {
+  width: fit-content;
+  height: 80vh;
+  object-fit: cover; }
+
+main .contenedor_carruselOfertas {
+  height: 170vw;
+  overflow: hidden; }
+  main .contenedor_carruselOfertas .imagen_Card {
+    display: flex;
+    height: 140vw;
+    align-items: center;
+    justify-content: center; }
+    main .contenedor_carruselOfertas .imagen_Card img {
+      max-width: 95%;
+      max-height: 95%; }
+  main .contenedor_carruselOfertas .card-body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 100%; }
+
+main .contenedor_Novedades .contenedor_overlayNovedades {
+  position: relative; }
+  main .contenedor_Novedades .contenedor_overlayNovedades img {
+    opacity: 1;
+    display: block;
+    max-width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    transition: .5s ease;
+    backface-visibility: hidden; }
+  main .contenedor_Novedades .contenedor_overlayNovedades .texto_Novedades {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-40%, -40%);
+    -ms-transform: translate(-40%, -40%); }
+  main .contenedor_Novedades .contenedor_overlayNovedades .texto_NovedadesNoHover {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-40%, -40%);
+    -ms-transform: translate(-40%, -40%);
+    color: white;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.603);
+    font-size: larger; }
+  main .contenedor_Novedades .contenedor_overlayNovedades:hover img {
+    opacity: 0.5;
+    filter: blur(1.5); }
+  main .contenedor_Novedades .contenedor_overlayNovedades:hover .texto_Novedades {
+    opacity: 1; }
+
+main h2 {
+  text-align: center; }
+
+main .contenedor_Categoria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+  main .contenedor_Categoria div {
+    padding: 0.5rem; }
+    main .contenedor_Categoria div img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; }
+
+main .contenedor_Coleccion .caratula_Coleccion img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+main .contenedor_Coleccion .contenedor_itemsColeccion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+  main .contenedor_Coleccion .contenedor_itemsColeccion div {
+    padding: 0.5rem; }
+    main .contenedor_Coleccion .contenedor_itemsColeccion div img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; }
+
+.contenedor_Contacto {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem; }
+  .contenedor_Contacto .contenedor_Formulario {
+    padding-bottom: 1rem; }
+    .contenedor_Contacto .contenedor_Formulario fieldset .textfield_Datos {
+      width: 100%;
+      padding-bottom: 1rem; }
+
+main .informacion_Articulo {
+  width: 100%; }
+  main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; }
+    main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos img {
+      width: 100%; }
+  main .informacion_Articulo .miniaturas_Carrusel ul {
+    display: flex;
+    width: 100%; }
+    main .informacion_Articulo .miniaturas_Carrusel ul li img {
+      width: 100%;
+      height: 25vw; }
+
+main .caracteristicas_Articulo {
+  margin: 1rem; }
+  main .caracteristicas_Articulo .precio_Articulo {
+    display: flex;
+    justify-content: space-around; }
+    main .caracteristicas_Articulo .precio_Articulo h3 {
+      margin: 1rem; }
+    main .caracteristicas_Articulo .precio_Articulo p {
+      color: gray;
+      margin: 1rem; }
+  main .caracteristicas_Articulo .selectores_Articulo {
+    display: flex;
+    justify-content: space-around; }
+    main .caracteristicas_Articulo .selectores_Articulo .selector_Talle button {
+      width: 9rem; }
+  main .caracteristicas_Articulo .descripcion_Articulo {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  main .caracteristicas_Articulo .detalles_Articulo ul {
+    padding-left: 2rem; }
+    main .caracteristicas_Articulo .detalles_Articulo ul li {
+      list-style: disc; }
+
+main .articulos_Recomendados {
+  width: 100%;
+  height: 630px;
+  overflow: hidden;
+  margin: 1rem 0 1rem 0; }
+  main .articulos_Recomendados h2 {
+    text-align: start; }
+  main .articulos_Recomendados ul li {
+    display: inline-block;
+    width: 200px; }
+    main .articulos_Recomendados ul li img {
+      width: 100%;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; }
+
+@media screen and (min-width: 1200px) {
+  main .navbar-nav .nav-item {
+    justify-content: start; }
+    main .navbar-nav .nav-item .nav-link {
+      font-size: 60px; }
+  main .contenedor_carruselInicio .item_Carrusel img {
+    object-position: top; }
+  main .contenedor_carruselOfertas {
+    overflow: visible;
+    height: auto; }
+    main .contenedor_carruselOfertas .card {
+      width: calc(100%/3);
+      position: relative; }
+      main .contenedor_carruselOfertas .card .imagen_Card {
+        flex-direction: row;
+        height: 45vw;
+        align-items: center;
+        justify-content: center; }
+  main .contenedor_Novedades img {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; }
+  main .contenedor_Categoria {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr); }
+    main .contenedor_Categoria .img_Hover {
+      transition-duration: 0.5s;
+      transition-property: transform; }
+      main .contenedor_Categoria .img_Hover:hover img {
+        transform: scale(1.03);
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486); }
+  main .contenedor_Coleccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    main .contenedor_Coleccion div {
+      display: flex;
+      flex-direction: row; }
+      main .contenedor_Coleccion div .contenedor_Caratula {
+        flex: 40%; }
+        main .contenedor_Coleccion div .contenedor_Caratula .caratula_Coleccion {
+          padding-right: 0.1rem; }
+      main .contenedor_Coleccion div .contenedor_itemsColeccion {
+        flex: 60%; }
+        main .contenedor_Coleccion div .contenedor_itemsColeccion .img_Hover {
+          transition-duration: 0.5s;
+          transition-property: transform; }
+          main .contenedor_Coleccion div .contenedor_itemsColeccion .img_Hover:hover img {
+            transform: scale(1.03);
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486); }
+          main .contenedor_Coleccion div .contenedor_itemsColeccion .img_Hover:hover .card_Precio {
+            background-color: rgba(46, 46, 46, 0.5); }
+  main .informacion_Articulo {
+    display: flex; }
+    main .informacion_Articulo .imagenes_Articulo {
+      flex: 50%; }
+      main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; }
+      main .informacion_Articulo .imagenes_Articulo .miniaturas_Carrusel {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; }
+        main .informacion_Articulo .imagenes_Articulo .miniaturas_Carrusel img {
+          height: 6.5vw; }
+    main .informacion_Articulo .caracteristicas_Articulo {
+      flex: 50%; }
+      main .informacion_Articulo .caracteristicas_Articulo .selectores_Articulo {
+        margin: 1rem; }
+      main .informacion_Articulo .caracteristicas_Articulo .descripcion_Articulo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40rem; }
+      main .informacion_Articulo .caracteristicas_Articulo .detalles_Articulo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40rem; }
+  main .articulos_Recomendados {
+    height: 340px; }
+  main .contenedor_Contacto {
+    flex-direction: row;
+    align-items: center; }
+    main .contenedor_Contacto .contenedor_Formulario {
+      flex: 70%; }
+    main .contenedor_Contacto .contenedor_Informacion {
+      display: flex;
+      flex-direction: column;
+      flex: 30%;
+      height: 250px;
+      padding: 1rem;
+      justify-content: center;
+      text-align: center; }
+  footer .contenedor_Filosofia {
+    display: flex;
+    flex-direction: row; }
+  footer .contenedor_Contactos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer .contenedor_Contactos .newsletter {
+      margin: 1rem;
+      width: 50rem; }
+    footer .contenedor_Contactos .redesSociales {
+      margin: 1rem;
+      width: 10rem; }
+  footer .contenedor_ListBottom {
+    justify-content: center; } }

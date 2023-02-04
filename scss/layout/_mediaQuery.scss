@@ -1,0 +1,200 @@
+@media screen and (min-width: 1200px) {
+
+    main {
+
+        // Header  
+
+        .navbar-nav {
+            .nav-item {
+                justify-content: start;
+                .nav-link {
+                    font-size: 60px;
+                }
+            }
+        }
+
+        // Pagina de index
+
+        .contenedor_carruselInicio {
+            .item_Carrusel {
+                img {
+                    object-position: top;
+                }
+            }
+        }
+
+        .contenedor_carruselOfertas {
+            overflow: visible;
+            height: auto;
+            .card {
+                width: calc(100%/3);
+                position: relative;
+                .imagen_Card {
+                    flex-direction: row;
+                    height: 45vw;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .contenedor_Novedades {
+            img {
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+    // Pagina de catalogo
+
+    .contenedor_Categoria {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+
+        .img_Hover {
+            transition-duration: 0.5s;
+            transition-property: transform;
+            &:hover img {
+                transform: scale(1.03);
+                box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486);
+            }
+        }
+    }
+
+    // Pagina de colecciones
+    .contenedor_Coleccion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        div {
+            display: flex;
+            flex-direction: row;
+            .contenedor_Caratula {
+                flex: 40%;
+                .caratula_Coleccion {
+                    padding-right: 0.1rem;
+                }
+            }
+            .contenedor_itemsColeccion {
+                flex: 60%;
+                
+                .img_Hover {
+                    transition-duration: 0.5s;
+                    transition-property: transform;
+
+                    &:hover img {
+                        transform: scale(1.03);
+                        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486);
+                    }
+
+                    &:hover .card_Precio {
+                        // height: 20%;
+                        // bottom: 210px;
+                        background-color: rgba(46, 46, 46, 0.5);
+                    }
+                }
+            }
+        }
+    }
+
+    // Pagina de articulos
+
+    .informacion_Articulo {
+        display: flex;
+        .imagenes_Articulo {
+            flex: 50%;
+            .carrusel_Fotos {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .miniaturas_Carrusel {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                img {
+                    height: 6.5vw;
+                }
+            }
+        }
+
+        .caracteristicas_Articulo {
+            flex: 50%;
+
+            .selectores_Articulo {
+                margin: 1rem;
+            }
+
+            .descripcion_Articulo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40rem;
+            }
+
+            .detalles_Articulo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40rem;
+            }
+        }
+    }
+
+    .articulos_Recomendados {
+        height: 340px;
+    }
+
+        // pagina de contactos
+
+        .contenedor_Contacto {
+            flex-direction: row;
+            align-items: center;
+
+            .contenedor_Formulario {
+                flex: 70%;
+            }
+            .contenedor_Informacion {
+                display: flex;
+                flex-direction: column;
+                flex: 30%;
+                height: 250px;
+                padding: 1rem;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+    }
+    // Pagina de Footer
+    footer {
+        
+        .contenedor_Filosofia {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contenedor_Contactos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+
+            .newsletter {
+                margin: 1rem;
+                width: 50rem;
+                
+            }
+            .redesSociales {
+                margin: 1rem;
+                width: 10rem;
+                
+            }
+        }
+        
+        .contenedor_ListBottom {
+            justify-content: center;
+        }
+    }
+}

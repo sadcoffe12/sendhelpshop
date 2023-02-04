@@ -1,0 +1,14 @@
+.contenedor_Contacto {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    .contenedor_Formulario {
+        padding-bottom: 1rem;
+        fieldset {
+            .textfield_Datos {
+            width: 100%;
+            padding-bottom: 1rem;
+            }
+        }
+    }
+}

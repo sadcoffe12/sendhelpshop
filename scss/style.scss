@@ -1,0 +1,22 @@
+
+// Variables
+@import "./utilities/variables";
+// Inicio
+@import "./base/import";
+@import "./base/reset";
+@import "./components/fonts";
+
+// Header
+@import "./layout/header";
+// Footer
+@import "./layout/footer";
+
+// Pages
+@import "./layout/index";
+@import "./layout/catalogo";
+@import "./layout/colecciones";
+@import "./layout/contacto";
+@import "./layout/articulo";
+//Media queries
+@import "./layout/mediaQuery";
+

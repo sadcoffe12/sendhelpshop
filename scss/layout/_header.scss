@@ -1,0 +1,28 @@
+header {
+    h1 {
+        text-align: center;
+        visibility: hidden;
+        font-size: smaller;
+        height: 1px;
+        
+    }
+
+    nav {
+
+        .nav_Logo {
+            width: 200px;
+            height: 50px;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+            justify-content: space-evenly;
+            .nav-link {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+    
+
+

@@ -1,0 +1,82 @@
+footer {
+    background-color: rgb(30, 30, 30);   
+    color: white;
+    padding: 2rem;
+
+    a{
+        color: white;
+    }
+
+
+    .contenedor_Filosofia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .textBox_Filosofia{
+            margin: 1rem;
+        }
+    }
+
+    .contenedor_Contactos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .newsletter {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-bottom: 1rem;
+
+            .cont_newsletter {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                .textField_newsletter {
+                    width: 80%;
+                }
+            }
+        }
+
+        .redesSociales {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-bottom: 1rem;
+
+            .cont_redesSociales {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+
+                .logos_redesSociales img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+
+    .contenedor_ListBottom {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        gap: 2%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
