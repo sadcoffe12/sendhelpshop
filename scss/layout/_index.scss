@@ -28,7 +28,6 @@ main {
 
         .card-body {
             display: flex;
-            // position: absolute;
             align-items: flex-end;
             justify-content: center;
             height: 100%;
@@ -86,5 +85,44 @@ main {
         }
     }
 
+@media screen and (min-width: 1200px) {
 
+    main {
+
+        .contenedor_carruselInicio {
+            .item_Carrusel {
+                img {
+                    object-position: top;
+                }
+            }
+        }
+
+        .contenedor_carruselOfertas {
+            overflow: visible;
+            height: auto;
+            .carousel-inner {
+                .card {
+                    width: calc(100%/3);
+                    position: relative;
+                    height: 40vw;
+                    
+                    .imagen_Card {
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        height: 35rem;
+                    }
+                }
+            }
+        }
+
+        .contenedor_Novedades {
+            img {
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
 

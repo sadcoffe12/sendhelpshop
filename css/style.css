@@ -10,6 +10,12 @@
     list-style-type: none;
     margin: 0;
     padding: 0; }
+  @media screen and (min-width: 1200px) {
+    * main {
+      margin-top: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom: 50px; } }
 
 * h1 h2 h3 p li {
   font-style: "Open Sans"; }
@@ -43,6 +49,12 @@ header nav .navbar-nav {
   justify-content: space-evenly; }
   header nav .navbar-nav .nav-link {
     font-size: 1.2rem; }
+
+@media screen and (min-width: 1200px) {
+  main .navbar-nav .nav-item {
+    justify-content: start; }
+    main .navbar-nav .nav-item .nav-link {
+      font-size: 60px; } }
 
 footer {
   background-color: #1e1e1e;
@@ -91,6 +103,23 @@ footer {
     flex-wrap: wrap;
     padding: 0 1rem;
     gap: 2%; }
+
+@media screen and (min-width: 1200px) {
+  footer .contenedor_Filosofia {
+    display: flex;
+    flex-direction: row; }
+  footer .contenedor_Contactos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer .contenedor_Contactos .newsletter {
+      margin: 1rem;
+      width: 50rem; }
+    footer .contenedor_Contactos .redesSociales {
+      margin: 1rem;
+      width: 10rem; }
+  footer .contenedor_ListBottom {
+    justify-content: center; } }
 
 main .contenedor_carruselInicio .item_Carrusel img {
   width: fit-content;
@@ -148,21 +177,84 @@ main .contenedor_Novedades .contenedor_overlayNovedades {
   main .contenedor_Novedades .contenedor_overlayNovedades:hover .texto_Novedades {
     opacity: 1; }
 
+@media screen and (min-width: 1200px) {
+  main .contenedor_carruselInicio .item_Carrusel img {
+    object-position: top; }
+  main .contenedor_carruselOfertas {
+    overflow: visible;
+    height: auto; }
+    main .contenedor_carruselOfertas .carousel-inner .card {
+      width: calc(100%/3);
+      position: relative;
+      height: 40vw; }
+      main .contenedor_carruselOfertas .carousel-inner .card .imagen_Card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 35rem; }
+  main .contenedor_Novedades img {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; } }
+
 main h2 {
   text-align: center; }
 
 main .contenedor_Categoria {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
-  main .contenedor_Categoria div {
-    padding: 0.5rem; }
-    main .contenedor_Categoria div img {
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem; }
+  main .contenedor_Categoria .card_Item {
+    padding: 1rem;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    overflow: hidden; }
+    main .contenedor_Categoria .card_Item img {
       object-fit: cover;
       width: 100%;
-      height: 100%;
-      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-      border-radius: 10px; }
+      height: 100%; }
+    main .contenedor_Categoria .card_Item .cardHover_Precio {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      height: 60px;
+      width: auto;
+      margin-top: 0px;
+      position: absolute;
+      transition-duration: 0.5s;
+      transition-property: transform; }
+      main .contenedor_Categoria .card_Item .cardHover_Precio p {
+        height: auto;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 2rem;
+        margin: 1rem; }
+
+@media screen and (min-width: 1200px) {
+  main .contenedor_Categoria {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr); }
+    main .contenedor_Categoria .card_Item {
+      transition-duration: 0.5s;
+      transition-property: transform;
+      height: 550px; }
+      main .contenedor_Categoria .card_Item:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5); }
+      main .contenedor_Categoria .card_Item:hover .cardHover_Precio {
+        margin-top: -44px;
+        background-color: rgba(44, 44, 44, 0.4);
+        color: white;
+        width: 92%; }
+        main .contenedor_Categoria .card_Item:hover .cardHover_Precio p {
+          visibility: visible;
+          opacity: 1; } }
 
 main .contenedor_Coleccion .caratula_Coleccion img {
   object-fit: cover;
@@ -173,109 +265,16 @@ main .contenedor_Coleccion .caratula_Coleccion img {
 main .contenedor_Coleccion .contenedor_itemsColeccion {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
-  main .contenedor_Coleccion .contenedor_itemsColeccion div {
-    padding: 0.5rem; }
-    main .contenedor_Coleccion .contenedor_itemsColeccion div img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-      border-radius: 10px; }
-
-.contenedor_Contacto {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem; }
-  .contenedor_Contacto .contenedor_Formulario {
-    padding-bottom: 1rem; }
-    .contenedor_Contacto .contenedor_Formulario fieldset .textfield_Datos {
-      width: 100%;
-      padding-bottom: 1rem; }
-
-main .informacion_Articulo {
-  width: 100%; }
-  main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos {
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem; }
+  main .contenedor_Coleccion .contenedor_itemsColeccion .card_Item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     border-radius: 10px; }
-    main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos img {
-      width: 100%; }
-  main .informacion_Articulo .miniaturas_Carrusel ul {
-    display: flex;
-    width: 100%; }
-    main .informacion_Articulo .miniaturas_Carrusel ul li img {
-      width: 100%;
-      height: 25vw; }
-
-main .caracteristicas_Articulo {
-  margin: 1rem; }
-  main .caracteristicas_Articulo .precio_Articulo {
-    display: flex;
-    justify-content: space-around; }
-    main .caracteristicas_Articulo .precio_Articulo h3 {
-      margin: 1rem; }
-    main .caracteristicas_Articulo .precio_Articulo p {
-      color: gray;
-      margin: 1rem; }
-  main .caracteristicas_Articulo .selectores_Articulo {
-    display: flex;
-    justify-content: space-around; }
-    main .caracteristicas_Articulo .selectores_Articulo .selector_Talle button {
-      width: 9rem; }
-  main .caracteristicas_Articulo .descripcion_Articulo {
-    margin-top: 1rem;
-    margin-bottom: 1rem; }
-  main .caracteristicas_Articulo .detalles_Articulo ul {
-    padding-left: 2rem; }
-    main .caracteristicas_Articulo .detalles_Articulo ul li {
-      list-style: disc; }
-
-main .articulos_Recomendados {
-  width: 100%;
-  height: 630px;
-  overflow: hidden;
-  margin: 1rem 0 1rem 0; }
-  main .articulos_Recomendados h2 {
-    text-align: start; }
-  main .articulos_Recomendados ul li {
-    display: inline-block;
-    width: 200px; }
-    main .articulos_Recomendados ul li img {
-      width: 100%;
-      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-      border-radius: 10px; }
 
 @media screen and (min-width: 1200px) {
-  main .navbar-nav .nav-item {
-    justify-content: start; }
-    main .navbar-nav .nav-item .nav-link {
-      font-size: 60px; }
-  main .contenedor_carruselInicio .item_Carrusel img {
-    object-position: top; }
-  main .contenedor_carruselOfertas {
-    overflow: visible;
-    height: auto; }
-    main .contenedor_carruselOfertas .card {
-      width: calc(100%/3);
-      position: relative; }
-      main .contenedor_carruselOfertas .card .imagen_Card {
-        flex-direction: row;
-        height: 45vw;
-        align-items: center;
-        justify-content: center; }
-  main .contenedor_Novedades img {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto; }
-  main .contenedor_Categoria {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr); }
-    main .contenedor_Categoria .img_Hover {
-      transition-duration: 0.5s;
-      transition-property: transform; }
-      main .contenedor_Categoria .img_Hover:hover img {
-        transform: scale(1.03);
-        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486); }
   main .contenedor_Coleccion {
     display: flex;
     flex-direction: column;
@@ -289,32 +288,132 @@ main .articulos_Recomendados {
           padding-right: 0.1rem; }
       main .contenedor_Coleccion div .contenedor_itemsColeccion {
         flex: 60%; }
-        main .contenedor_Coleccion div .contenedor_itemsColeccion .img_Hover {
+        main .contenedor_Coleccion div .contenedor_itemsColeccion .card_Item {
           transition-duration: 0.5s;
-          transition-property: transform; }
-          main .contenedor_Coleccion div .contenedor_itemsColeccion .img_Hover:hover img {
+          transition-property: transform;
+          border-radius: 10px; }
+          main .contenedor_Coleccion div .contenedor_itemsColeccion .card_Item:hover {
             transform: scale(1.03);
-            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486); }
-          main .contenedor_Coleccion div .contenedor_itemsColeccion .img_Hover:hover .card_Precio {
-            background-color: rgba(46, 46, 46, 0.5); }
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.486); } }
+
+.contenedor_Contacto {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem; }
+  .contenedor_Contacto .contenedor_Formulario {
+    padding-bottom: 1rem; }
+    .contenedor_Contacto .contenedor_Formulario fieldset .textfield_Datos {
+      width: 100%;
+      padding-bottom: 1rem; }
+  .contenedor_Contacto .contenedor_Informacion {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    justify-content: center; }
+
+@media screen and (min-width: 1200px) {
+  main .contenedor_Contacto {
+    flex-direction: row;
+    align-items: center; }
+    main .contenedor_Contacto .contenedor_Formulario {
+      flex: 70%; }
+    main .contenedor_Contacto .contenedor_Informacion {
+      flex: 30%;
+      height: 300px; } }
+
+main .informacion_Articulo {
+  width: 100%; }
+  main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos img {
+    width: 100%; }
+  main .informacion_Articulo .miniaturas_Carrusel ul {
+    display: flex;
+    justify-content: center; }
+    main .informacion_Articulo .miniaturas_Carrusel ul li img {
+      width: 100%;
+      height: 25vw; }
+
+main .caracteristicas_Articulo {
+  margin: 3rem; }
+  main .caracteristicas_Articulo .precio_Articulo {
+    display: flex;
+    justify-content: start; }
+    main .caracteristicas_Articulo .precio_Articulo h3 {
+      padding-right: 1rem; }
+    main .caracteristicas_Articulo .precio_Articulo p {
+      color: gray; }
+  main .caracteristicas_Articulo .selectores_Articulo {
+    display: flex;
+    justify-content: flex-start; }
+    main .caracteristicas_Articulo .selectores_Articulo .selector_Talle {
+      padding-right: 1rem; }
+      main .caracteristicas_Articulo .selectores_Articulo .selector_Talle button {
+        width: 9rem; }
+  main .caracteristicas_Articulo .descripcion_Articulo {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  main .caracteristicas_Articulo .detalles_Articulo ul {
+    padding-left: 2rem; }
+    main .caracteristicas_Articulo .detalles_Articulo ul li {
+      list-style: disc; }
+  main .caracteristicas_Articulo .boton_Compra {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 6rem; }
+
+main .articulos_Recomendados {
+  width: 100%;
+  height: 630px;
+  overflow: hidden;
+  margin: 1rem 0 1rem 0; }
+  main .articulos_Recomendados h2 {
+    text-align: start; }
+  main .articulos_Recomendados ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; }
+    main .articulos_Recomendados ul li {
+      width: 200px;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; }
+      main .articulos_Recomendados ul li img {
+        width: 100%;
+        height: 100%; }
+
+@media screen and (min-width: 1200px) {
   main .informacion_Articulo {
     display: flex; }
     main .informacion_Articulo .imagenes_Articulo {
       flex: 50%; }
       main .informacion_Articulo .imagenes_Articulo .carrusel_Fotos {
-        width: 50%;
+        width: 25rem;
         margin-left: auto;
-        margin-right: auto; }
+        margin-right: auto;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; }
       main .informacion_Articulo .imagenes_Articulo .miniaturas_Carrusel {
-        width: 50%;
+        width: 25rem;
         margin-left: auto;
-        margin-right: auto; }
+        margin-right: auto;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; }
         main .informacion_Articulo .imagenes_Articulo .miniaturas_Carrusel img {
-          height: 6.5vw; }
+          height: 7rem; }
     main .informacion_Articulo .caracteristicas_Articulo {
-      flex: 50%; }
+      flex: 50%;
+      border-radius: 10px;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); }
+      main .informacion_Articulo .caracteristicas_Articulo .precio_Articulo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40rem; }
       main .informacion_Articulo .caracteristicas_Articulo .selectores_Articulo {
-        margin: 1rem; }
+        margin: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40rem; }
       main .informacion_Articulo .caracteristicas_Articulo .descripcion_Articulo {
         display: block;
         margin-left: auto;
@@ -325,33 +424,13 @@ main .articulos_Recomendados {
         margin-left: auto;
         margin-right: auto;
         width: 40rem; }
+      main .informacion_Articulo .caracteristicas_Articulo .boton_Compra {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40rem;
+        height: 6rem; }
   main .articulos_Recomendados {
-    height: 340px; }
-  main .contenedor_Contacto {
-    flex-direction: row;
-    align-items: center; }
-    main .contenedor_Contacto .contenedor_Formulario {
-      flex: 70%; }
-    main .contenedor_Contacto .contenedor_Informacion {
+    height: 400px; }
+    main .articulos_Recomendados ul {
       display: flex;
-      flex-direction: column;
-      flex: 30%;
-      height: 250px;
-      padding: 1rem;
-      justify-content: center;
-      text-align: center; }
-  footer .contenedor_Filosofia {
-    display: flex;
-    flex-direction: row; }
-  footer .contenedor_Contactos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    footer .contenedor_Contactos .newsletter {
-      margin: 1rem;
-      width: 50rem; }
-    footer .contenedor_Contactos .redesSociales {
-      margin: 1rem;
-      width: 10rem; }
-  footer .contenedor_ListBottom {
-    justify-content: center; } }
+      flex-wrap: wrap; } }

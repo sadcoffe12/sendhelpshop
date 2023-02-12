@@ -24,5 +24,20 @@ header {
     }
 }
     
+@media screen and (min-width: 1200px) {
+
+    main {
+
+        .navbar-nav {
+            .nav-item {
+                justify-content: start;
+                .nav-link {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+
 
 

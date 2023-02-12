@@ -8,15 +8,75 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        div {
-            padding: 0.5rem;
-            img{
+        gap: 0.5rem;
+
+        .card_Item {
+            padding: 1rem;
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+
+            img {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
-                box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-                border-radius: 10px;
+            }
+
+            .cardHover_Precio {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+                height: 60px;
+                width: auto;
+                margin-top: 0px;
+                position: absolute;
+                transition-duration: 0.5s;
+                transition-property: transform;
+                p {
+                    height: auto;
+                    visibility: hidden;
+                    opacity: 0;
+                    font-size: 2rem;
+                    margin: 1rem;
+                }
             }
         }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    main {
+
+        .contenedor_Categoria {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+
+            .card_Item {
+                transition-duration: 0.5s;
+                transition-property: transform;
+                height: 550px;
+                &:hover {
+                    transform: scale(1.03);
+                    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
+                }
+
+                &:hover .cardHover_Precio {
+                    margin-top: -44px;
+                    background-color: rgba(44, 44, 44, 0.4);
+                    color: white;
+                    width: 92%;
+                    p {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        } 
     }
 }
